@@ -21,3 +21,24 @@ const fizzBuzz = (num) => {
 }
 
 console.log(fizzBuzz(100));
+
+function nextPrime(n) {
+  n++;
+  while (true) {
+      let isPrime = true;
+      
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+              isPrime = false;
+              break;
+          }
+      }
+      if (isPrime) {
+          return n;
+      }
+      n++;
+  }
+}
+
+let n = 5;
+console.log(nextPrime(n));
